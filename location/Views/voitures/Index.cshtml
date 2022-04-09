@@ -1,0 +1,78 @@
+﻿@model IEnumerable<location.Models.voiture>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Modele.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modele.serie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numero_matriculation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categorie.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_mise_circulation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prix_Par_Jour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carburant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Modele.nom)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Modele.serie)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.numero_matriculation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Categorie.type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.date_mise_circulation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.prix_Par_Jour)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.carburant)
+    </td>
+    <td>
+        @*@Html.DisplayFor(modelItem => item.image)*@
+        <img src="@item.image" width="150" height="150" />
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.voitureID }, new { @class = "btn btn-outline-success" }) 
+        @Html.ActionLink("Details", "Details", new { id = item.voitureID }, new { @class = "btn btn-outline-primary" }) 
+        @Html.ActionLink("Delete", "Delete", new { id = item.voitureID }, new { @class = "btn btn-outline-danger" })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model location.Models.clt
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>clt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdresseMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdresseMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotDePasse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotDePasse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateNaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateNaissance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.permis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.permis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

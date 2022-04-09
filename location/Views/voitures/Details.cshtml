@@ -1,0 +1,75 @@
+﻿@model location.Models.voiture
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>voiture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorie.CategorieID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorie.CategorieID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modele.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modele.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero_matriculation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero_matriculation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_mise_circulation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_mise_circulation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prix_Par_Jour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prix_Par_Jour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carburant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carburant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.voitureID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
